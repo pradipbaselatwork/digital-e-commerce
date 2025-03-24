@@ -1,7 +1,7 @@
-// app/_components/Hero.jsx
 import React from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link';  // ✅ Fixed Import
 
 export default function Hero() {
   return (
@@ -16,7 +16,9 @@ export default function Hero() {
           </p>
           <div className='flex gap-5 mt-8'>
             <Button className="bg-blue-500 text-white hover:bg-blue-600 transition-all">Explore</Button>
-            <Button className="bg-purple-500 text-white hover:bg-purple-600 transition-all">Sell</Button>
+            <Link href="/dashboard">
+              <Button className="bg-purple-500 text-white hover:bg-purple-600 transition-all">Sell</Button>
+            </Link>
           </div>
         </div>
         <div className='flex items-center justify-center'> 

@@ -3,6 +3,7 @@ import React from 'react'
 import { Button } from '@/components/ui/button'
 import { ShoppingBag } from 'lucide-react'
 import { UserButton } from '@clerk/clerk-react'
+import Link from 'next/link'
 
 function Header() {
     const MenuList = [
@@ -32,9 +33,11 @@ function Header() {
 
             <div className="flex items-center gap-3">
                 <ShoppingBag className="text-white" size={24} />
-                <Button className="bg-blue-500 text-white hover:bg-blue-600 transition-all px-3 py-1">
-                    Start Selling
-                </Button>
+                <Link href="/dashboard">
+                    <Button className="bg-blue-500 text-white hover:bg-blue-600 transition-all px-3 py-1">
+                        Start Selling
+                    </Button>
+                </Link>
                 <UserButton></UserButton>
             </div>
         </div>
